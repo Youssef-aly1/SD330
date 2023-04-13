@@ -1,0 +1,20 @@
+{
+    "courses" : {
+        "CMPT330": {
+            "courseID": "1",
+            "Title" : "System Design",
+            "Semester" : "Sring2023",
+            "Professor" : "Andrew Tokash"
+
+        }
+    },
+    "Books" : {
+        "BookNum" : {
+            "courseID" : "1",
+            "ISBN" : "2419237",
+            "Title" : "Name of Book",
+            "Author" : "Author of book"
+        }
+
+    }
+}
