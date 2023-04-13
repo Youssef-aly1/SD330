@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body{
+        background-image: url("https://media.istockphoto.com/id/1395140929/vector/seamless-pattern-with-bright-multicolored-happy-faces-modern-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=0pW1LeMxyEfzXpjSwH13L__w69Y75pfs88TJrCDpVkI=");
+        background-repeat: round;
+        
+    }
+    .intro{
+        background-color: white;
+        border-width: 5px;
+        border-style: solid;
+        border-color: purple;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+</style>
+    <body onload ="fileList();">
+        <div class="intro">
+        <h1>Welcome to Youssef's Repository file list <img src="C:\Users\kingp\Pictures\pfp.jpg" alt="profile"></h1>;
+        <h1><b>Below is a list of files in my public repository SD330.</b></h1>;
+        </div>
+        
+        <p id ="files"></p>
+
+        <script type="module">
+            let htmlString = "";
+            
+            function fileList(){ 
+            (async () => {
+                const response = 
+                    await fetch("https://api.github.com/repos/Youssef-aly1/SD330/contents/");
+                const data = await response.json();
+
+                htmlString ="<p> the names are: " + data['name']
+            
+                
+                for (let file of data) {
+
+                
+
+                    fname = file.name;           
+                    fpath = file.html;  
+                    
+                    htmlString += "<p>" + fname;
+                    htmlString += "<p>" + fpath;
+                }
+            
+                
+                
+            })()
+        }	
+        document.getElementById('files').innerHTML += htmlString;
+        </script>
+    </body>
+    <footer>
+        (c) Youssef Aly 04/12/2023
+    </footer>
+</html>
