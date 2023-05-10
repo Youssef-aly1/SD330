@@ -1,0 +1,94 @@
+{
+    "courses" : {
+        "CMPT330": {
+            "courseID": "1",
+            "Title" : "System Design",
+            "Semester" : "Spring 2023",
+            "Professor" : "Andrew Tokash"
+        },
+        "CMPT120": {
+            "courseID" : "2",
+            "Title" : "Introduction to programming",
+            "Semester" : "Fall 2021",
+            "Professor" : "Mathew Johnson"
+        },
+        "CMPT220": {
+            "courseID" : "3",
+            "Title" : "Software Development 1",
+            "Semester" : "Spring 2022",
+            "Professor" : "Aaron Kippins"
+        },
+        "CMPT230": {
+            "courseID" : "4",
+            "Title" : "Software Systems and Analysis",
+            "Semester" : "Spring 2022",
+            "Professor" : "Cathy Martensen"
+        },
+        "CMPT 221": {
+            "courseID" : "5",
+            "Title" : "Software Development 2",
+            "Semester" : "Fall 2022",
+            "Professor" : "Juan Arias"
+        },
+        "CMPT 306": {
+            "courseID" : "6",
+            "Title" : "Data Communications",
+            "Semester" : "Fall 2022",
+            "Professor" : "Bowu Zhang"
+        },
+        "CMPT 308": {
+            "courseID" : "7",
+            "Title" : "Database Management",
+            "Semester" : "Fall 2022",
+            "Professor" : "Donald Schwartz"
+        }
+    },
+    "Books" : {
+        "Book1": {
+            "courseID" : "1",
+            "ISBN" : "2419237",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+        },
+        "Book2": {
+            "courseID" : "2",
+            "ISBN" : "1849273",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+
+        },
+        "Book3": {
+            "courseID" : "3",
+            "ISBN" : "0987654",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+        },
+        "Book4": {
+            "courseID" : "4",
+            "ISBN" : "1234567",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+
+        },
+        "Book5": {
+            "courseID" : "5",
+            "ISBN" : "8293745",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+        },
+        "Book6": {
+            "courseID" : "6",
+            "ISBN" : "1209783",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+
+        },
+        "Book7": {
+            "courseID" : "7",
+            "ISBN" : "8465300",
+            "Title" : "Interaction Design beyond human-computer interaction",
+            "Author" : "Helen Sharp"
+        }
+
+    }
+}

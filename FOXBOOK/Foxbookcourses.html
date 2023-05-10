@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<HTML lang="english">
+<style>
+h1{
+    font-family: 'Times New Roman', Times, serif; color: white;
+}
+p{
+    font-family: 'Times New Roman', Times, serif; color: white;
+}
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #ffffff;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+#hp  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+</style>
+<head>
+    <img src="redfox.png" alt="" width="80s" height="80" id="hp"/>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href=Foxbookhome.html>Home</a></li>
+            <li class="crumb">Courses</li>
+
+        </ol>
+    </nav>
+</head>
+
+<body style="background-color: red;">
+    <p id="info"></p>
+
+<script type="module">
+    let htmlString = "<h1> List of All Courses:</h1>";
+    const response = 
+        await fetch("https://youssef-aly1.github.io/SD330/Courses.json");
+
+    const data = await response.json();
+    htmlString += "<p> • Course 1: "+
+                            data['courses']['CMPT330']['Title'] + " Taught by " +
+                            data['courses']['CMPT330']['Professor'] + " During "+
+                            data['courses']['CMPT330']['Semester'];
+    htmlString += "<p> • Course 2: "+
+                            data['courses']['CMPT120']['Title'] + " Taught by " +
+                            data['courses']['CMPT120']['Professor'] + " During "+
+                            data['courses']['CMPT120']['Semester'];
+    htmlString += "<p> • Course 3: "+
+                            data['courses']['CMPT220']['Title'] + " Taught by " +
+                            data['courses']['CMPT220']['Professor'] + " During "+
+                            data['courses']['CMPT220']['Semester'];
+    htmlString += "<p> • Course 4: "+
+                            data['courses']['CMPT230']['Title'] + " Taught by " +
+                            data['courses']['CMPT230']['Professor'] + " During "+
+                            data['courses']['CMPT230']['Semester'];
+    htmlString += "<p> • Course 5: "+
+                            data['courses']['CMPT 221']['Title'] + " Taught by " +
+                            data['courses']['CMPT 221']['Professor'] + " During "+
+                            data['courses']['CMPT 221']['Semester'];
+    htmlString += "<p> • Course 6: "+
+                            data['courses']['CMPT 306']['Title'] + " Taught by " +
+                            data['courses']['CMPT 306']['Professor'] + " During "+
+                            data['courses']['CMPT 306']['Semester'];
+    htmlString += "<p> • Course 7: "+
+                            data['courses']['CMPT 308']['Title'] + " Taught by " +
+                            data['courses']['CMPT 308']['Professor'] + " During "+
+                            data['courses']['CMPT 308']['Semester'];
+
+    
+    document.getElementById('info').innerHTML += htmlString;
+</script>
+<footer>
+    <hr>
+    <small> &copy; Youssef Aly May 9, 2023  </small>
+    </footer> 
+</body>
+</HTML>

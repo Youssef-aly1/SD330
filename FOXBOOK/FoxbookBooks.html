@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<HTML lang="english">
+<style>
+h1{
+    font-family: 'Times New Roman', Times, serif; color: white;
+}
+p{
+    font-family: 'Times New Roman', Times, serif; color: white;
+}
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #ffffff;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+#hp  {
+float: left;    
+ margin: 0 15px 0 0;
+}
+</style>
+<head>
+    <img src="redfox.png" alt="" width="80s" height="80" id="hp"/>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href=Foxbookhome.html>Home</a></li>
+            <li class="crumb">Books</li>
+
+        </ol>
+    </nav>
+</head>
+
+<body style="background-color: red;">
+    <p id="info"></p>
+
+<script type="module">
+    let htmlString = "<h1> List of All Books:</h1>";
+    const response = 
+        await fetch("https://youssef-aly1.github.io/SD330/Courses.json");
+
+    const data = await response.json();
+    htmlString += "<p> • Book 1: "+
+                            data['Books']['Book1']['Title'] + " Written by " +
+                            data['Books']['Book1']['Author'] + " Used In Course Number "+
+                            data['Books']['Book1']['courseID'] + " ISBN: "+
+                            data['Books']['Book1']['ISBN'];
+    htmlString += "<p> • Book 2: "+
+                            data['Books']['Book2']['Title'] + " Written by " +
+                            data['Books']['Book2']['Author'] + " Used In Course Number "+
+                            data['Books']['Book2']['courseID'] + " ISBN: "+
+                            data['Books']['Book2']['ISBN'];
+    htmlString += "<p> • Book 3: "+
+                            data['Books']['Book3']['Title'] + " Written by " +
+                            data['Books']['Book3']['Author'] + " Used In Course Number "+
+                            data['Books']['Book3']['courseID'] + " ISBN: "+
+                            data['Books']['Book3']['ISBN'];
+    htmlString += "<p> • Book 4: "+
+                            data['Books']['Book4']['Title'] + " Written by " +
+                            data['Books']['Book4']['Author'] + " Used In Course Number "+
+                            data['Books']['Book4']['courseID'] + " ISBN: "+
+                            data['Books']['Book4']['ISBN'];
+    htmlString += "<p> • Book 5: "+
+                            data['Books']['Book5']['Title'] + " Written by " +
+                            data['Books']['Book5']['Author'] + " Used In Course Number "+
+                            data['Books']['Book5']['courseID'] + " ISBN: "+
+                            data['Books']['Book5']['ISBN'];
+    htmlString += "<p> • Book 6: "+
+                            data['Books']['Book6']['Title'] + " Written by " +
+                            data['Books']['Book6']['Author'] + " Used In Course Number "+
+                            data['Books']['Book6']['courseID'] + " ISBN: "+
+                            data['Books']['Book6']['ISBN'];
+                            data['Books']['Book5']['ISBN'];
+    htmlString += "<p> • Book 7: "+
+                            data['Books']['Book7']['Title'] + " Written by " +
+                            data['Books']['Book7']['Author'] + " Used In Course Number "+
+                            data['Books']['Book7']['courseID'] + " ISBN: "+
+                            data['Books']['Book7']['ISBN'];
+    
+
+    document.getElementById('info').innerHTML += htmlString;
+</script>
+<footer>
+    <hr>
+    <small> &copy; Youssef Aly May 9, 2023  </small>
+    </footer> 
+</body>
+</HTML>
